@@ -1,5 +1,6 @@
 pub mod header;
 pub mod lump;
+pub mod patch;
 pub mod thing;
 
 use self::header::WadHeader;
