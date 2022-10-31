@@ -53,7 +53,7 @@ mod tests {
     #[test]
     pub fn test_read_wad() {
         assert!(matches!(
-            parse("/home/emercier/Downloads/DOOM2.WAD"),
+            parse("tests/data/DOOM2.WAD"),
             Ok(WadHeader {
                 wad_type: WadType::IWAD,
                 lumps_number: 2919,
@@ -65,7 +65,7 @@ mod tests {
     #[test]
     pub fn test_read_invalid_wad() {
         assert!(matches!(
-            parse("/home/emercier/Downloads/url.png"),
+            parse("tests/data/not_a.wad"),
             Err(WadError::UnkownWadType(_))
         ));
     }
